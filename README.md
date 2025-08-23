@@ -29,7 +29,6 @@ O objetivo deste repositório é fornecer exemplos prontos e bem estruturados pa
 - **Frontend**  
   - React.js  
   - Axios  
-  - Tailwind CSS / Material UI  
 
 - **Backend**  
   - Java 17+  
@@ -63,21 +62,12 @@ cd springboot/api-template
 
 ---
 
-## 🤝 Contribuição  
-
-Sinta-se à vontade para **abrir issues** ou **enviar pull requests** com melhorias, novos templates e correções.  
-Esse repositório é colaborativo e feito para ajudar a comunidade 🚀  
-
----
-
 ## 📜 Licença  
 
 Este projeto está sob a licença **MIT**.  
 Você pode usar, modificar e compartilhar livremente.  
 
 ---
-
-# 🌍 English Version  
 
 Welcome to the repository of **base codes** for **React.js** and **Java / Spring Boot** projects.  
 The goal of this repository is to provide ready-to-use and well-structured examples to speed up **frontend and backend** development, serving as a guide and starting point for new projects.  
@@ -139,13 +129,6 @@ npm start
 cd springboot/api-template
 ./mvnw spring-boot:run
 ```
-
----
-
-## 🤝 Contribution  
-
-Feel free to **open issues** or **submit pull requests** with improvements, new templates, and fixes.  
-This repository is collaborative and made to help the community 🚀  
 
 ---
 
