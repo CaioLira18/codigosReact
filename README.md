@@ -69,6 +69,8 @@ Você pode usar, modificar e compartilhar livremente.
 
 ---
 
+# 🚀 Base Codes - React.js & Spring Boot  
+
 Welcome to the repository of **base codes** for **React.js** and **Java / Spring Boot** projects.  
 The goal of this repository is to provide ready-to-use and well-structured examples to speed up **frontend and backend** development, serving as a guide and starting point for new projects.  
 
