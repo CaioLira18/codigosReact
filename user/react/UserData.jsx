@@ -1,45 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
 
 const UserData = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [name, setName] = useState('');
+   
    useEffect(() => {
-      const storedUser = localStorage.getItem('user');
-  
-      if (storedUser) {
-        try {
-          const parsedUser = JSON.parse(storedUser);
-  
-          fetch(`${API_URL}/users`)
-            .then((res) => res.json())
-            .then((allUsers) => {
-              const fullUser = allUsers.find(user => user.id === parsedUser.id);
-  
-              if (fullUser) {
-                console.log('👤 Usuário encontrado:', fullUser);
-                setCurrentUser(fullUser);
-                setIsAuthenticated(true);
-                setIsAdmin(fullUser.role === 'ADMIN');
-                setName(fullUser.name || '');
-              } else {
-                localStorage.removeItem("user");
-                setIsAuthenticated(false);
-                setIsAdmin(false);
-                setName('');
-              }
-            })
-            .catch((err) => {
-              console.error("Erro ao buscar usuários:", err);
-              localStorage.removeItem("user");
-              setIsAuthenticated(false);
-              setIsAdmin(false);
-              setName('');
-            });
-        } catch (parseError) {
-          localStorage.removeItem("user");
-        }
-      } else {
-        console.log('❌ Nenhum usuário encontrado no localStorage');
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        setIsAuthenticated(true);
+        setIsAdmin(parsedUser.role === 'ADMIN');
+        setName(parsedUser.name || '');
+      } catch (err) {
+        console.error("Erro ao processar usuário do localStorage", err);
       }
-    }, []);
+    }
+  }, []);
 }
 
 export default UserData
+
